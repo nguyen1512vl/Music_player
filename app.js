@@ -23,7 +23,7 @@ const app = {
     config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {
         isRepeat: false,
         isRandom: false,
-        currentIndex: 0
+        // currentIndex: 0
     },
     songs: [
         {
@@ -262,7 +262,7 @@ const app = {
         audio.src = this.currentSong.path
         const songList = $$('.song')
         songList[this.currentIndex].classList.add('active')
-        this.setConfig('currentIndex', this.currentIndex)
+        // this.setConfig('currentIndex', this.currentIndex)
     },
     autoScroll(isNext) {
         if (isNext) {
@@ -287,6 +287,7 @@ const app = {
     }
 }
 
+app.currentIndex = 0
 app.start()
 
 
