@@ -107,7 +107,6 @@ const app = {
         $('.playlist').innerHTML = htmls.join('')
     },
     defineProperties() {
-        this = this
         Object.defineProperty(this, 'currentSong', {
             get() {
                 return this.songs[this.currentIndex]
