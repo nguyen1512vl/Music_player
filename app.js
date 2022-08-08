@@ -275,7 +275,7 @@ const app = {
         }
     },
     start() {
-        this.loadConfig()
+        if (config.currentIndex !== undefined) this.loadConfig()
         this.defineProperties()
         this.render()
         this.handleEvents()
@@ -283,7 +283,6 @@ const app = {
     }
 }
 
-app.currentIndex = 0
 app.start()
 
 
