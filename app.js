@@ -20,7 +20,11 @@ const app = {
     isPlaying: false,
     isRepeat: false,
     isRandom: false,
-    config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
+    config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {
+        isRepeat: false,
+        isRandom: false,
+        currentIndex: 0
+    },
     songs: [
         {
             name: 'Light and Shadow',
@@ -275,7 +279,7 @@ const app = {
         }
     },
     start() {
-        if (config.currentIndex !== undefined) this.loadConfig()
+        this.loadConfig()
         this.defineProperties()
         this.render()
         this.handleEvents()
