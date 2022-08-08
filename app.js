@@ -283,6 +283,7 @@ const app = {
     }
 }
 
+app.currentIndex = 0
 app.start()
 
 
