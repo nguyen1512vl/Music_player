@@ -94,7 +94,7 @@ const app = {
     loadConfig() {
         this.isRepeat = this.config.isRepeat
         this.isRandom = this.config.isRandom
-        this.currentIndex = this.config.currentIndex
+        // this.currentIndex = this.config.currentIndex
     },
     render() {
         var htmls = this.songs.map(song => `<div class="song">
